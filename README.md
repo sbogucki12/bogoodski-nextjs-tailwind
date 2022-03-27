@@ -1,3 +1,18 @@
+# BOGOODSKI-nextjs-tailwind
+
+Practicing with tailwind css and typescript on nextjs by building a new personal site.  Utilizing Daisy UI for design help. 
+
+## Day 0
+
+<p><b>March 26, 2022</b></p>
+
+<img src="https://bogoodski.blob.core.windows.net/bogoodski2022/bogoodski-tailwind-nextjs-day0.png">
+
+
+
+
+
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
