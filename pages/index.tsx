@@ -1,27 +1,31 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from '../public/images/meForSlack.jpg'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <div className="flex justify-center items-center">
-        <div className="avatar pt-4">
-          <div className="w-12 mask mask-hexagon">
-            <Image src={profilePic} />
+    <div className="flex flex-col justify-center items-center h-screen :w-screen" data-theme="night">
+      
+      <div className='border-solid border-accent border-4 rounded-box shadow-xl bg-secondary-content p-4 lg:p-8'>
+        
+        <div className="flex justify-center items-center w-full ">
+          <div className="avatar">
+            <div className="w-8 lg:w-12 mask mask-hexagon">
+              <Image src={profilePic} />
+            </div>
+          </div>
+          <span className='text-lg sm:text-xl lg:text-7xl lg:p-4'>BOGOODSKI</span>
+        </div>
+
+        <div className="flex flex-row justify-between ">
+          <div>
+            <button className="btn btn-outline btn-success btn-xs md:btn-md lg:btn-lg">Personal</button>
+          </div>
+          <div>
+            <button className='btn btn-outline btn-warning btn-xs md:btn-md lg:btn-lg'>Professional</button>
           </div>
         </div>
-        <span className='text-7xl'>BOGOODSKI</span>
-      </div>
 
-      <div className="flex flex-row justify-between w-1/4 m-10">
-        <div>
-          <button className="btn btn-outline btn-success">Personal</button>
-        </div>
-        <div>
-          <button className='btn btn-outline btn-warning'>Professional</button>
-        </div>
       </div>
 
     </div>
