@@ -5,6 +5,11 @@ import Link from 'next/link'
 import profilePic from '../public/images/meForSlack.jpg'
 
 const Home: NextPage = () => {
+  function myFunction(){
+    let element: HTMLElement | null = document.getElementById('myDiv');
+    element?.classList.toggle('animate-wiggle');
+  }
+
   return (
     <div>
       <Head>
@@ -32,7 +37,7 @@ const Home: NextPage = () => {
             <div>
               <Link href='/personal'>
                 <a >
-                  <button className="btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-28 lg:w-36 hover:animate-bounce">Personal</button>
+                  <button id='myDiv' className="btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-28 lg:w-36 animate-bounce">Personal</button>
                 </a>
               </Link>
 
@@ -40,7 +45,7 @@ const Home: NextPage = () => {
             <div>
               <Link href='/professional'>
                 <a>
-                  <button className='btn btn-warning btn-xs md:btn-md lg:btn-lg hover:bg-secondary w-28 lg:w-36 hover:animate-bounce'>Professional</button>
+                  <button className='btn btn-warning btn-xs md:btn-md lg:btn-lg hover:bg-secondary w-28 lg:w-36 hover:animate-bounce'>Professiona'</button>
                 </a>
               </Link>
 
@@ -49,7 +54,9 @@ const Home: NextPage = () => {
 
         </div>
 
-
+        <div>
+          <button onClick={() => myFunction()}>Toggle</button>
+        </div>
 
       </div>
     </div>
