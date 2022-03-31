@@ -5,9 +5,13 @@ import Link from 'next/link'
 import profilePic from '../public/images/meForSlack.jpg'
 
 const Home: NextPage = () => {
-  function myFunction(){
+  function setClass(utility: string ){
     let element: HTMLElement | null = document.getElementById('myDiv');
-    element?.classList.toggle('animate-wiggle');
+    if(element)
+    {
+      element.className += utility; 
+    }  
+    
   }
 
   return (
@@ -15,7 +19,7 @@ const Home: NextPage = () => {
       <Head>
         <title>BOGOODSKI</title>
       </Head>
-      <div className="flex flex-col justify-center items-center h-screen :w-screen" data-theme="night">
+      <div id='myDiv' className="flex flex-col justify-center items-center h-screen :w-screen" data-theme="night">
 
         <div className='border-solid border-warning border-2 w-11/12 h-36 -skew-y-12 z-0 absolute' />
 
@@ -35,27 +39,27 @@ const Home: NextPage = () => {
 
           <div className="flex flex-row justify-evenly space-x-4 z-10 pb-2 lg:pl-2 lg:pr-2">
             <div>
-              <Link href='/personal'>
-                <a >
-                  <button id='myDiv' className="btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-28 lg:w-36 animate-bounce">Personal</button>
+              {/* <Link href='/personal'>
+                <a>
+                  <button id='myDiv' className='btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-32 lg:w-36 hover:animate-wiggle'>Personal</button>
                 </a>
-              </Link>
+              </Link> */}
+
+                {/* button to test fade-out */}
+                <button  onClick={() => setClass(' animate-fade-out')} className='btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-32 lg:w-36 hover:animate-wiggle'>Fade Out</button>
+
 
             </div>
             <div>
               <Link href='/professional'>
                 <a>
-                  <button className='btn btn-warning btn-xs md:btn-md lg:btn-lg hover:bg-secondary w-28 lg:w-36 hover:animate-bounce'>Professiona'</button>
+                  <button className='btn btn-warning btn-xs md:btn-md lg:btn-lg hover:bg-secondary w-32 lg:w-36 hover:animate-wiggle'>Professional</button>
                 </a>
               </Link>
 
             </div>
           </div>
 
-        </div>
-
-        <div>
-          <button onClick={() => myFunction()}>Toggle</button>
         </div>
 
       </div>

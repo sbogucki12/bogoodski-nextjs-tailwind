@@ -11,15 +11,33 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
     },
-    extend:{
+    extend: {
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'fade-out': 'fade-out 0.5s ease-out forwards',
+        'fade-in': 'fade-in 0.5s ease-in 5s forwards'
       },
       fontFamily: {
         'title': ['"Bungee", "cursive"'],
       },
       keyframes: {
-        wiggle: {
+        'fade-out': {
+          '100%': {
+            opacity: '1'
+          },
+          '100%': {
+            opacity: '0'
+          },
+        },
+        'fade-in': {
+          '100%': {
+            opacity: '0'
+          },
+          '100%': {
+            opacity: '1'
+          }
+        },
+        'wiggle': {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         }
