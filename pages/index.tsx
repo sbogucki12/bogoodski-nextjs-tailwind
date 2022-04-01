@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import PersonalHome from './screens/PersonalHome'
+import Landing from './screens/Landing'
 
 export interface Props {
   screen: string
@@ -16,19 +16,22 @@ const Home: NextPage = (screen) => {
     if (element) {
       element.className += utility;
     }
+  }
 
-    const [screen1, setScreen] = useState('personalHome');
+    const [screen1, setScreen] = useState('home');
     
     if (screen1 == 'home') {
-      display = <div><h1>Screen Home</h1></div>
+      display = <Landing setScreen={setScreen} />
     }
+    
+    
 
-    if(screen1 == 'personalHome')
+    if(screen1 == 'personal')
     {
-      display = <PersonalHome setScreen={setScreen} />;
+      display = <div><h1>Personal</h1><button className="btn btn-success" onClick={() => setScreen('home')}>Home</button></div>
     }
 
-  }
+  
 
   return (
     <div>
@@ -43,6 +46,7 @@ const Home: NextPage = (screen) => {
     </div>
 
   )
+
 }
 
 export default Home

@@ -1,15 +1,13 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Head from 'next/head'
 import Link from 'next/link'
 import profilePic from '../../public/images/meForSlack.jpg'
-import { useState } from 'react'
 
 export interface Props {
     setScreen: Function
   }
 
-const PersonalHome: NextPage<Props> = ({setScreen}) => {
+const Landing: NextPage<Props> = ({setScreen}) => {
     return <>
     <div className='border-solid border-warning border-2 w-11/12 h-36 -skew-y-12 z-0 absolute' />
 
@@ -36,7 +34,7 @@ const PersonalHome: NextPage<Props> = ({setScreen}) => {
   </Link> */}
 
           {/* button to test fade-out */}
-          <button onClick={() => setScreen('home')} className='btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-32 lg:w-36 hover:animate-wiggle'>Fade Out</button>
+          <button onClick={() => setScreen('personal')} className='btn btn-success btn-xs md:btn-md lg:btn-lg hover:bg-error w-32 lg:w-36 hover:animate-wiggle'>Personal</button>
 
 
         </div>
@@ -54,4 +52,4 @@ const PersonalHome: NextPage<Props> = ({setScreen}) => {
   </>
 }
 
-export default PersonalHome; 
+export default Landing; 
