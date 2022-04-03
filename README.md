@@ -4,7 +4,7 @@ Practicing with tailwind css and typescript on nextjs by building a new personal
 
 ## Day 3
 
-<p><b>April, 2022</b></p>
+<p><b>April 2, 2022</b></p>
 
 <ul><li>Playing around with animations in css</li></ul>
 
