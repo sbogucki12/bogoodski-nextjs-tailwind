@@ -1,6 +1,15 @@
 # BOGOODSKI-nextjs-tailwind
 
 Practicing with tailwind css and typescript on nextjs by building a new personal site.  Utilizing Daisy UI for design help. 
+
+## Day 3
+
+<p><b>April, 2022</b></p>
+
+<ul><li>Playing around with animations in css</li></ul>
+
+<img src="https://bogoodski.blob.core.windows.net/bogoodski2022/animation-logo-gif.gif">
+
 ## Day 2
 
 <p><b>March 31, 2022</b></p>

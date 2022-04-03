@@ -2,46 +2,48 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
 import Landing from './screens/Landing'
+import Personal from './screens/Personal'
+import Professional from './screens/Professional'
 
 export interface Props {
-  screen: string
+  screen: {} | string
 }
 
-var display: JSX.Element = <div><h1>TEST</h1></div>
+const Home: NextPage = (screen: {} | string) => {  
+  const [selectedScreen, setSelectedScreen] = useState('home');
 
-
-const Home: NextPage = (screen) => {
   function setClass(utility: string) {
     let element: HTMLElement | null = document.getElementById('myDiv');
     if (element) {
-      element.className += utility;
+      element.className += ' animate-fade-out';
     }
+    
+    setSelectedScreen(utility);
   }
-
-    const [screen1, setScreen] = useState('home');
-    
-    if (screen1 == 'home') {
-      display = <Landing setScreen={setScreen} />
-    }
-    
-    
-
-    if(screen1 == 'personal')
-    {
-      display = <div><h1>Personal</h1><button className="btn btn-success" onClick={() => setScreen('home')}>Home</button></div>
-    }
-
-  
 
   return (
     <div>
       <Head>
         <title>BOGOODSKI</title>
       </Head>
-      <div id='myDiv' className="flex flex-col justify-center items-center h-screen :w-screen" data-theme="night">
-
-        {display}
-
+      <div className="flex flex-col justify-center items-center h-screen" data-theme="night">
+    
+    {(() => {
+          switch (selectedScreen) {
+            case 'home':
+              return <Landing setScreen={setClass} />
+            case typeof ({}):
+              return <Landing setScreen={setClass} />
+            case 'personal':
+              return <Personal setScreen={setClass} />
+            case 'professional':
+              return <Professional setScreen={setClass} />
+            default:
+              return <div><h1>Default</h1></div>
+          }
+        })()}
+    
+        
       </div>
     </div>
 

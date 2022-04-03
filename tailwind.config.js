@@ -15,7 +15,8 @@ module.exports = {
       animation: {
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'fade-out': 'fade-out 0.5s ease-out forwards',
-        'fade-in': 'fade-in 0.5s ease-in 5s forwards'
+        'fade-in': 'fade-in 0.5s ease-in 5s forwards',
+        'spin': 'spin 850ms'
       },
       fontFamily: {
         'title': ['"Bungee", "cursive"'],
@@ -38,8 +39,20 @@ module.exports = {
           }
         },
         'wiggle': {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%, 100%': {
+            transform: 'rotate(-3deg)'
+          },
+          '50%': {
+            transform: 'rotate(3deg)'
+          },
+        },
+        'spin': {
+          'from': {
+            transform: 'rotate(0deg)'
+          },
+          'to': {
+            transform: 'rotate(360deg)'
+          }
         }
       }
     }
@@ -59,3 +72,5 @@ module.exports = {
     darkTheme: "dark",
   },
 }
+
+
