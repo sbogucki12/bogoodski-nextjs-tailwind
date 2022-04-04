@@ -22,11 +22,11 @@ const Home: NextPage = (screen: {} | string) => {
   }
 
   return (
-    <div>
+    <div className="min-h-min h-screen" data-theme="night">
       <Head>
         <title>BOGOODSKI</title>
       </Head>
-      <div className="flex flex-col justify-center items-center h-screen" data-theme="night">
+      <div className="flex flex-col justify-center items-center h-full" >
     
     {(() => {
           switch (selectedScreen) {
