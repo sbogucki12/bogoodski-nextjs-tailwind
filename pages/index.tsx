@@ -18,6 +18,7 @@ const Home: NextPage = (screen: {} | string) => {
       element.className += ' animate-fade-out';
     }
     
+    window.location.pathname = "/" + utility;
     setSelectedScreen(utility);
   }
 

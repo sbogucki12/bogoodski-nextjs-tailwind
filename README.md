@@ -2,6 +2,18 @@
 
 Practicing with tailwind css and typescript on nextjs by building a new personal site.  Utilizing Daisy UI for design help. 
 
+## Day 4
+
+<p><b>April 6, 2022</b></p>
+
+<ul>
+<li>
+Made some room for the spinning animation to occur on-click by dynamically updating the window location pathname instead of using an anchor tag.  
+</li>
+</ul>
+
+<img src="https://bogoodski.blob.core.windows.net/bogoodski2022/dynamic-page-change.gif" />
+
 ## Day 3
 
 <p><b>April 2, 2022</b></p>
