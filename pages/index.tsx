@@ -1,15 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import Landing from './screens/Landing'
-import Personal from './screens/Personal'
-import Professional from './screens/Professional'
+import Landing from '../screens/Landing'
+import Personal from '../screens/Personal'
+import Professional from '../screens/Professional'
 
-export interface Props {
-  screen: {} | string
-}
-
-const Home: NextPage = (screen: {} | string) => {  
+const Home: NextPage = () => {  
   const [selectedScreen, setSelectedScreen] = useState('home');
 
   function setClass(utility: string) {
@@ -42,8 +38,7 @@ const Home: NextPage = (screen: {} | string) => {
             default:
               return <div><h1>Default</h1></div>
           }
-        })()}
-    
+        })()}    
         
       </div>
     </div>

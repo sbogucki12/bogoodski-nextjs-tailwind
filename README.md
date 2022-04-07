@@ -10,6 +10,8 @@ Practicing with tailwind css and typescript on nextjs by building a new personal
 <li>
 Made some room for the spinning animation to occur on-click by dynamically updating the window location pathname instead of using an anchor tag.  
 </li>
+<li>Removed some code that was redundant due to the action above</li>
+<li>Added the screens folder to tailwind config</li>
 </ul>
 
 <img src="https://bogoodski.blob.core.windows.net/bogoodski2022/dynamic-page-change.gif" />

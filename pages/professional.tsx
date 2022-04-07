@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import ProfessionalContent from './screens/Professional'
+import ProfessionalContent from '../screens/Professional'
 
 export interface Props {
     screen: {} | string
@@ -11,11 +11,6 @@ const Professional: NextPage = (screen: {} | string) => {
     const [selectedScreen, setSelectedScreen] = useState('professional');
 
     function setClass(utility: string) {
-        let element: HTMLElement | null = document.getElementById('myDiv');
-        if (element) {
-            element.className += ' animate-fade-out';
-        }
-
         window.location.pathname = "/" + utility;
         setSelectedScreen(utility);
     }

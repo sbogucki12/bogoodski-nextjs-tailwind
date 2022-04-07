@@ -1,13 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import LandingContent from './screens/Landing'
+import LandingContent from '../screens/Landing'
 
-export interface Props {
-    screen: {} | string
-}
-
-const Home: NextPage = (screen: {} | string) => {
+const Home: NextPage = () => {
     const [selectedScreen, setSelectedScreen] = useState('home');
 
     function setClass(utility: string) {

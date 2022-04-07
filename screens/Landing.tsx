@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import profilePic from '../../public/images/meForSlack.jpg'
+import profilePic from '../public/images/meForSlack.jpg'
 
 export interface Props {
     setScreen: Function
@@ -11,13 +11,14 @@ const Landing: NextPage<Props> = ({setScreen}) => {
     let element: HTMLElement | null = document.getElementById('myDiv');
     if (element) {
       element.className += ' animate-fade-out animate-spin';    
+    }    
+      setTimeout(() => {
+        setScreen(utility)
+      }, (900))     
+
     }
-    
-    setTimeout(() => {
-      setScreen(utility)
-    }, (900))
       
-  }
+  
     return <>
     <div className='border-solid border-warning border-2 w-11/12 h-36 -skew-y-12 z-0 absolute' />
 
