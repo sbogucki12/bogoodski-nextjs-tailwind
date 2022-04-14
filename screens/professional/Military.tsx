@@ -2,7 +2,9 @@ import type { NextPage } from 'next'
 
 const Military: NextPage = () => {
     return (
-        <div className="flex flex-col bg-secondary h-[600px] items-center justify-center p-6">
+        <div className="flex flex-col bg-secondary h-[600px] items-center justify-center p-6 bg-fixed bg-cover" style={{
+            backgroundImage: "url('https://bogoodski.blob.core.windows.net/bogoodski2022/waves.jpg')"
+        }}>
             <div className='text-center '>
                 <h1>☮️</h1>
                 <p>FTP'ing HTML to geocities was a thing for me during childhood.  And e-wrestling. Somehow my path to total nerdom derailed, and I spent a handful of years in the Army as a forward observer, deployed to Iraq two times, and spent a few months in South Korea. </p>
