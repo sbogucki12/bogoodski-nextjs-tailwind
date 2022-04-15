@@ -11,8 +11,8 @@ export interface Props {
 
 const Professional: NextPage<Props> = ({ setScreen }) => {
   return (
-    <div className="min-h-screen w-5/6 bg-neutral bg-fixed bg-cover" style={{
-      backgroundImage: "url('https://bogoodski.blob.core.windows.net/bogoodski2022/moon-mountains.jpg')"
+    <div className="min-h-screen w-5/6 bg-neutral bg-fixed bg-cover " style={{
+      backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://bogoodski.blob.core.windows.net/bogoodski2022/moon-mountains.jpg')"
   }}>
       <div className="flex flex-col h-5/6 justify-center align-center relative">
         <SolutionArchitect />

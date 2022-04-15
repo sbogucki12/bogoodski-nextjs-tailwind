@@ -22,6 +22,11 @@ module.exports = {
       fontFamily: {
         'title': ['"Bungee", "cursive"'],
       },
+      colors: {
+        'professional-bg-primary': '#fff',
+        'professional-text-primary': '#1e2124',
+        'professional-text-secondary': '#636363'
+      },
       keyframes: {
         'fade-out': {
           '100%': {

@@ -8,7 +8,7 @@ export interface Props {
 
 const SolutionArchitect: NextPage<Props> = () => {
   return (
-    <div className="flex flex-row p-5 bg-[#180d5b]" >
+    <div className="flex flex-row p-5 bg-professional-bg-primary text-professional-text-primary rounded m-4 border-2 border-professional-text-primary " >
       <div className="w-1/5">
         <Image src={solutionArchLogo} placeholder="blur" />
       </div>
